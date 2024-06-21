@@ -10,24 +10,23 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/productMaterialCardView"
-        android:layout_marginRight="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:layout_marginRight="4dp"
+        android:angle="90"
         android:background="@color/brown"
+        android:outlineAmbientShadowColor="@color/brown"
+        android:outlineSpotShadowColor="@color/brown"
         app:cardCornerRadius="25dp"
         app:cardElevation="5dp"
         app:strokeColor="@color/brown"
-        app:strokeWidth="2dp"
-        android:angle="90"
-        android:outlineAmbientShadowColor="@color/brown"
-        android:outlineSpotShadowColor="@color/brown"
-        >
+        app:strokeWidth="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/brown">
 
 
@@ -37,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
+                android:background="@color/transparant"
                 android:fontFamily="@font/opensans_medium"
                 android:gravity="start|top"
                 android:padding="16dp"
@@ -52,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
+                android:background="@color/transparant"
                 android:fontFamily="@font/opensans_medium"
                 android:gravity="start|top"
                 android:padding="16dp"
@@ -69,6 +70,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp"
+                android:background="@color/transparant"
                 android:fontFamily="@font/opensans_medium"
                 android:gravity="start|top"
                 android:padding="16dp"
