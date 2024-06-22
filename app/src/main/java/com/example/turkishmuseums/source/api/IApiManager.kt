@@ -15,18 +15,18 @@ interface IApiManager {
 
     @GET("museum/cities")
     suspend fun getAllCities(
-        @Query("apiKey") apiKey: String
+       // @Query("apiKey") apiKey: String
     ): Response<CityResponse>
 
     @GET("museum/cities")
     suspend fun getDistricts(
-        @Query("apiKey") apiKey: String,
+       // @Query("apiKey") apiKey: String,
         @Query("city") city: String
     ): Response<DistrictResponse>
 
     @GET("museum/")
     suspend fun getAllMuseumByCurrentData(
-        @Query("apiKey") apiKey: String,
+       // @Query("apiKey") apiKey: String,
         @Query("city") city: String,
         @Query("district") district: String
     ): Response<MuseumResponse>
