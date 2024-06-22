@@ -16,20 +16,20 @@ class MuseumRepository  @Inject constructor(private val api: IApiManager) {
 
     suspend fun getAllCities(): Resource<CityResponse> {
         return safeApiRequest {
-            api.getAllCities(/*API_KEY*,*/)
+            api.getAllCities(API_KEY)
         }
     }
 
 
     suspend fun getDistricts(city:String): Resource<DistrictResponse> {
         return safeApiRequest {
-            api.getDistricts(/*API_KEY*,*/city)
+            api.getDistricts(API_KEY,city)
         }
     }
 
     suspend fun getAllMuseumByCurrentData(city:String, district:String): Resource<MuseumResponse> {
         return safeApiRequest {
-            api.getAllMuseumByCurrentData(/*API_KEY*,*/city,district)
+            api.getAllMuseumByCurrentData(API_KEY,city,district)
         }
     }
 
