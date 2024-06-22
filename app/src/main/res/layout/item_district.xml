@@ -5,7 +5,7 @@
     <data>
         <variable
             name="district"
-            type="com.example.androidlesson24.models.responses.get.region.DistrictData" />
+            type="com.example.turkishmuseums.models.responses.get.region.DistrictData" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
