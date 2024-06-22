@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidLesson24"
+rootProject.name = "Turkish museums"
 include(":app")
  

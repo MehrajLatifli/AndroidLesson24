@@ -11,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.androidlesson24"
+    namespace = "com.example.turkishmuseums"
     compileSdk = 34
 
 
@@ -29,7 +29,7 @@ android {
 
 
     defaultConfig {
-        applicationId = "com.example.androidlesson24"
+        applicationId = "com.example.turkishmuseums"
         minSdk = 33
         targetSdk = 34
         versionCode = 1

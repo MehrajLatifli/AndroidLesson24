@@ -5,7 +5,7 @@
     <data>
         <variable
             name="museum"
-            type="com.example.androidlesson24.models.responses.get.museum.MuseumData" />
+            type="com.example.turkishmuseums.models.responses.get.museum.MuseumData" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
