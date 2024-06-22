@@ -176,8 +176,13 @@ dependencies {
 
     implementation ("androidx.core:core-ktx:1.13.1")
 
+    //lottie
     implementation("com.airbnb.android:lottie:6.4.1")
 
+    //OkHttp
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:okhttp-urlconnection:4.12.0")
 
 
 }
