@@ -1,6 +1,5 @@
 package com.example.turkishmuseums.dependencyInjection
 
-import com.example.turkishmuseums.source.api.ApiKeyInterceptor
 import com.example.turkishmuseums.source.api.IApiManager
 import com.example.turkishmuseums.utilities.Constants.Base_URL
 import com.squareup.picasso.BuildConfig
@@ -20,44 +19,15 @@ import javax.inject.Singleton
 object NetworkModule {
 
 
-    @Singleton
-    @Provides
-    fun provideApiInterceptor(): ApiKeyInterceptor {
-        return ApiKeyInterceptor()
-    }
+
+
 
 
     @Singleton
     @Provides
-    fun provideHttpLoggerInterceptor(): HttpLoggingInterceptor
-    {
-        val httpLoggingInterceptor = HttpLoggingInterceptor ()
-        if (BuildConfig.DEBUG) {
-            httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        } else {
-            httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.NONE
-        }
-        return httpLoggingInterceptor
-    }
-
-    @Singleton
-    @Provides
-    fun provideHttpClint(
-        httpLoggingInterceptor: HttpLoggingInterceptor,
-        apiKeyInterceptor: ApiKeyInterceptor
-    ): OkHttpClient {
-        return OkHttpClient.Builder().readTimeout(60, TimeUnit.SECONDS)
-            .connectTimeout(68, TimeUnit.SECONDS)
-            .addInterceptor (httpLoggingInterceptor)
-            .addInterceptor(apiKeyInterceptor)
-            .build()
-    }
-
-    @Singleton
-    @Provides
-    fun provideRetrofit(okHttpClient:OkHttpClient): Retrofit {
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(Base_URL).client(okHttpClient)
+            .baseUrl(Base_URL)
             .addConverterFactory(GsonConverterFactory.create()).build()
     }
 
